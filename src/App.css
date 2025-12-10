@@ -1,0 +1,197 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 0.75rem;
+  color: #333;
+  font-size: 1.25rem;
+}
+
+.address {
+  text-align: center;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.group-badge {
+  background: #3b82f6;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.queue-selector {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.queue-selector label {
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.queue-selector select {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #3b82f6;
+  border-radius: 0.5rem;
+  background: white;
+  cursor: pointer;
+}
+
+.queue-selector select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+.schedule-table {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.schedule-table .day-section {
+  flex: 1;
+}
+
+@media (max-width: 500px) {
+  .schedule-table {
+    flex-direction: column;
+  }
+}
+
+.day-section {
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.day-label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.hours-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.hour-cell {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.hour-cell .hour-label {
+  color: rgba(0,0,0,0.7);
+}
+
+.hour-cell.power {
+  background-color: #4ade80;
+}
+
+.hour-cell.outage {
+  background-color: #f87171;
+}
+
+.hour-cell.outage-first {
+  background: linear-gradient(to right, #f87171 50%, #4ade80 50%);
+}
+
+.hour-cell.outage-second {
+  background: linear-gradient(to right, #4ade80 50%, #f87171 50%);
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.legend-color {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+}
+
+.legend-color.power {
+  background-color: #4ade80;
+}
+
+.legend-color.outage {
+  background-color: #f87171;
+}
+
+.legend-color.outage-half {
+  background: linear-gradient(to right, #f87171 50%, #4ade80 50%);
+}
+
+.error {
+  color: #dc2626;
+  text-align: center;
+}
+
+.info {
+  text-align: center;
+  color: #059669;
+  margin-bottom: 1rem;
+}
+
+.info.actual {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.refreshing {
+  display: inline-block;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .container {
+    background-color: #1a1a1a;
+    color: #fff;
+  }
+
+  h1 {
+    color: #fff;
+  }
+
+  .day-section {
+    background: #2a2a2a;
+  }
+
+  .hour-cell .hour-label {
+    color: rgba(255,255,255,0.7);
+  }
+}
