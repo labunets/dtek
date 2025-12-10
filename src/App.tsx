@@ -15,6 +15,7 @@ interface ScheduleData {
   queue: string
   address: string
   lastUpdate: string
+  scrapedAt?: string
   today: DaySchedule
   tomorrow: DaySchedule
 }
@@ -78,14 +79,8 @@ function App() {
 
       <div className="address">
         <span className="group-badge">Черга {schedule.queue}</span>
-      </div>
-
-      <p className="info actual">
-        Фактичний графік відключень
         {refreshing && <span className="refreshing"> (оновлення...)</span>}
-        <br />
-        <small>Оновлено: {schedule.lastUpdate}</small>
-      </p>
+      </div>
 
       <div className="schedule-table">
         <div className="day-section">
@@ -131,6 +126,11 @@ function App() {
           <span>Частково (30 хв)</span>
         </div>
       </div>
+
+      <p className="info actual">
+        <small>DTEK: {schedule.lastUpdate}</small>
+        {schedule.scrapedAt && <><br /><small>Скрейпер: {schedule.scrapedAt}</small></>}
+      </p>
     </div>
   )
 }

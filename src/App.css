@@ -66,8 +66,64 @@ h1 {
 }
 
 @media (max-width: 500px) {
+  .container {
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .address {
+    margin-bottom: 0.5rem;
+  }
+
   .schedule-table {
     flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .day-section {
+    padding: 0.5rem;
+  }
+
+  .day-label {
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .hours-grid {
+    gap: 0;
+  }
+
+  .hour-cell {
+    padding: 0.1rem 0.4rem;
+    font-size: 0.65rem;
+    min-height: 1rem;
+    border-radius: 1px;
+  }
+
+  .legend {
+    margin-top: 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .legend-item {
+    font-size: 0.75rem;
+  }
+
+  .legend-color {
+    width: 16px;
+    height: 16px;
+  }
+
+  .info.actual {
+    margin-top: 0.5rem;
+  }
+
+  .info.actual small {
+    font-size: 0.65rem;
   }
 }
 
@@ -92,10 +148,11 @@ h1 {
 .hour-cell {
   display: flex;
   align-items: center;
-  padding: 0.25rem 0.5rem;
-  border-radius: 3px;
-  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+  font-size: 0.7rem;
   font-weight: 500;
+  min-height: 1.1rem;
 }
 
 .hour-cell .hour-label {

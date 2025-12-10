@@ -85,7 +85,7 @@ async function scrapeSchedule() {
 
         for (let i = 2; i < cells.length; i++) {
           const cell = cells[i];
-          const hour = i - 2;
+          const hour = i - 1;
 
           if (cell.classList.contains('cell-scheduled')) {
             slots.push({ hour, type: 'full' });
@@ -120,6 +120,7 @@ async function scrapeSchedule() {
 async function run() {
   try {
     const data = await scrapeSchedule();
+    data.scrapedAt = new Date().toLocaleString('uk-UA', { timeZone: 'Europe/Kyiv' });
     console.log(`✓ Черга ${data.queue}: ${data.today.slots.length} відключень сьогодні, ${data.tomorrow.slots.length} завтра`);
 
     writeFileSync('public/schedule.json', JSON.stringify(data, null, 2));

@@ -6,12 +6,8 @@
     "date": "10.12.25",
     "slots": [
       {
-        "hour": 4,
-        "type": "second-half"
-      },
-      {
         "hour": 5,
-        "type": "full"
+        "type": "second-half"
       },
       {
         "hour": 6,
@@ -35,11 +31,11 @@
       },
       {
         "hour": 11,
-        "type": "first-half"
+        "type": "full"
       },
       {
-        "hour": 15,
-        "type": "full"
+        "hour": 12,
+        "type": "first-half"
       },
       {
         "hour": 16,
@@ -51,6 +47,10 @@
       },
       {
         "hour": 18,
+        "type": "full"
+      },
+      {
+        "hour": 19,
         "type": "first-half"
       }
     ]
@@ -58,5 +58,6 @@
   "tomorrow": {
     "date": "11.12.25",
     "slots": []
-  }
+  },
+  "scrapedAt": "10.12.2025, 17:04:15"
 }
