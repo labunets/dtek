@@ -1,7 +1,7 @@
 {
   "queue": "3.1",
   "address": "вул. Метрологічна, 11",
-  "lastUpdate": "10.12.2025 15:51",
+  "lastUpdate": "10.12.2025 21:03",
   "today": {
     "date": "10.12.25",
     "slots": [
@@ -51,13 +51,78 @@
       },
       {
         "hour": 19,
-        "type": "first-half"
+        "type": "full"
       }
     ]
   },
   "tomorrow": {
     "date": "11.12.25",
-    "slots": []
+    "slots": [
+      {
+        "hour": 2,
+        "type": "second-half"
+      },
+      {
+        "hour": 3,
+        "type": "full"
+      },
+      {
+        "hour": 4,
+        "type": "full"
+      },
+      {
+        "hour": 5,
+        "type": "full"
+      },
+      {
+        "hour": 6,
+        "type": "full"
+      },
+      {
+        "hour": 7,
+        "type": "full"
+      },
+      {
+        "hour": 8,
+        "type": "full"
+      },
+      {
+        "hour": 9,
+        "type": "first-half"
+      },
+      {
+        "hour": 13,
+        "type": "full"
+      },
+      {
+        "hour": 14,
+        "type": "full"
+      },
+      {
+        "hour": 15,
+        "type": "full"
+      },
+      {
+        "hour": 16,
+        "type": "full"
+      },
+      {
+        "hour": 17,
+        "type": "full"
+      },
+      {
+        "hour": 18,
+        "type": "full"
+      },
+      {
+        "hour": 19,
+        "type": "full"
+      },
+      {
+        "hour": 23,
+        "type": "second-half"
+      }
+    ]
   },
-  "scrapedAt": "10.12.2025, 17:04:15"
+  "scrapedAt": "10.12.2025, 23:51:33"
 }
